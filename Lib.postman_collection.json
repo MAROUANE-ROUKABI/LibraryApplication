@@ -1,0 +1,295 @@
+{
+  "info": {
+    "name": "Library",
+    "description": "Full API documentation for the Mega Library Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:9090",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Authors",
+      "item": [
+        {
+          "name": "Get all authors",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/auteurs", "host": ["{{baseUrl}}"], "path": ["auteurs"] }
+          }
+        },
+        {
+          "name": "Get author by ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/auteurs/1", "host": ["{{baseUrl}}"], "path": ["auteurs", "1"] }
+          }
+        },
+        {
+          "name": "Create author",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/auteurs", "host": ["{{baseUrl}}"], "path": ["auteurs"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Thompson\",\n  \"prenom\": \"Kelly\",\n  \"portraitUrl\": \"https://example.com/kelly-thompson.jpg\"\n}",
+              "options": { "raw": { "language": "json" } }
+            }
+          }
+        },
+        {
+          "name": "Update author",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/auteurs/1", "host": ["{{baseUrl}}"], "path": ["auteurs", "1"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Thompson\",\n  \"prenom\": \"Kelly\",\n  \"portraitUrl\": \"https://example.com/kelly-thompson.jpg\"\n}",
+              "options": { "raw": { "language": "json" } }
+            }
+          }
+        },
+        {
+          "name": "Delete author",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{baseUrl}}/auteurs/1", "host": ["{{baseUrl}}"], "path": ["auteurs", "1"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Get all categories",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/categories", "host": ["{{baseUrl}}"], "path": ["categories"] }
+          }
+        },
+        {
+          "name": "Get category by ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/categories/1", "host": ["{{baseUrl}}"], "path": ["categories", "1"] }
+          }
+        },
+        {
+          "name": "Create category",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/categories", "host": ["{{baseUrl}}"], "path": ["categories"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Marvel Comics\"\n}",
+              "options": { "raw": { "language": "json" } }
+            }
+          }
+        },
+        {
+          "name": "Update category",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/categories/1", "host": ["{{baseUrl}}"], "path": ["categories", "1"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Superhero Comics\"\n}",
+              "options": { "raw": { "language": "json" } }
+            }
+          }
+        },
+        {
+          "name": "Delete category",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{baseUrl}}/categories/1", "host": ["{{baseUrl}}"], "path": ["categories", "1"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Publishers",
+      "item": [
+        {
+          "name": "Get all publishers",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/editeurs", "host": ["{{baseUrl}}"], "path": ["editeurs"] }
+          }
+        },
+        {
+          "name": "Get publisher by ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/editeurs/1", "host": ["{{baseUrl}}"], "path": ["editeurs", "1"] }
+          }
+        },
+        {
+          "name": "Create publisher",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/editeurs", "host": ["{{baseUrl}}"], "path": ["editeurs"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Marvel Comics\",\n  \"address\": {\n    \"street\": \"135 W 50th St\",\n    \"city\": \"New York\",\n    \"zipCode\": \"10020\",\n    \"country\": \"United States\"\n  }\n}",
+              "options": { "raw": { "language": "json" } }
+            }
+          }
+        },
+        {
+          "name": "Update publisher",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/editeurs/1", "host": ["{{baseUrl}}"], "path": ["editeurs", "1"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Marvel Comics\",\n  \"address\": {\n    \"street\": \"135 W 50th St\",\n    \"city\": \"New York\",\n    \"zipCode\": \"10020\",\n    \"country\": \"United States\"\n  }\n}",
+              "options": { "raw": { "language": "json" } }
+            }
+          }
+        },
+        {
+          "name": "Delete publisher",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{baseUrl}}/editeurs/1", "host": ["{{baseUrl}}"], "path": ["editeurs", "1"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Books",
+      "item": [
+        {
+          "name": "Get all books",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/livres", "host": ["{{baseUrl}}"], "path": ["livres"] }
+          }
+        },
+        {
+          "name": "Get all books (filtered)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/livres?auteurId=1&editeurId=1&categorie=Marvel Comics",
+              "host": ["{{baseUrl}}"],
+              "path": ["livres"],
+              "query": [
+                { "key": "auteurId", "value": "1", "description": "Filter by author ID" },
+                { "key": "editeurId", "value": "1", "description": "Filter by publisher ID" },
+                { "key": "categorie", "value": "Marvel Comics", "description": "Filter by category name" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get book by ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/livres/1", "host": ["{{baseUrl}}"], "path": ["livres", "1"] }
+          }
+        },
+        {
+          "name": "Create book - Jeff the Land Shark (with image)",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/livres", "host": ["{{baseUrl}}"], "path": ["livres"] },
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "livreDto",
+                  "value": "{\n  \"titre\": \"Jeff the Land Shark (2025) #1\",\n  \"pages\": 30,\n  \"description\": \"Hot off his star-making appearance in Marvel Rivals, everyone's favorite walking fish boy has bitten off his first starring miniseries! Join Jeff as he teams up with many of the friends he has made over the years and outsmarts more than a few rivals along the way. Armed with sharp teeth, disarming cuteness, and some all-new abilities, Jeff is both endearing and formidable. Written by Kelly Thompson with art by Tokitokoro and covers by Gurihiru, this is the series that sharpens the teeth of the undeniable star of the entire Marvel Universe. Love him or hate him — you know you want to see more Jeff.\",\n  \"datePublication\": \"2025-06-01\",\n  \"auteurId\": 1,\n  \"categoryId\": 1,\n  \"editeurId\": 1\n}",
+                  "type": "text",
+                  "description": "Book data as JSON string"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "",
+                  "description": "Book cover image (optional)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create book - Jeff the Land Shark (without image)",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/livres", "host": ["{{baseUrl}}"], "path": ["livres"] },
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "livreDto",
+                  "value": "{\n  \"titre\": \"Jeff the Land Shark (2025) #1\",\n  \"pages\": 30,\n  \"description\": \"Hot off his star-making appearance in Marvel Rivals, everyone's favorite walking fish boy has bitten off his first starring miniseries! Join Jeff as he teams up with many of the friends he has made over the years and outsmarts more than a few rivals along the way. Armed with sharp teeth, disarming cuteness, and some all-new abilities, Jeff is both endearing and formidable. Written by Kelly Thompson with art by Tokitokoro and covers by Gurihiru, this is the series that sharpens the teeth of the undeniable star of the entire Marvel Universe. Love him or hate him — you know you want to see more Jeff.\",\n  \"datePublication\": \"2025-06-01\",\n  \"auteurId\": 1,\n  \"categoryId\": 1,\n  \"editeurId\": 1\n}",
+                  "type": "text"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update book (with image)",
+          "request": {
+            "method": "PUT",
+            "url": { "raw": "{{baseUrl}}/livres/1", "host": ["{{baseUrl}}"], "path": ["livres", "1"] },
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "livreDto",
+                  "value": "{\n  \"titre\": \"Jeff the Land Shark: Friends and Rivals\",\n  \"pages\": 120,\n  \"description\": \"Collecting Jeff the Land Shark (2025) #1-5. Join Jeff as he teams up with many of the friends he has made over the years and outsmarts more than a few rivals along the way. But a malevolent force has been set upon the world — a being of pure darkness who wants nothing more than dismay and destruction. Beware the evil known as Shadow Jeff!\",\n  \"datePublication\": \"2026-05-01\",\n  \"auteurId\": 1,\n  \"categoryId\": 1,\n  \"editeurId\": 1\n}",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "",
+                  "description": "New cover image (optional — omit to keep existing)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update book (without image)",
+          "request": {
+            "method": "PUT",
+            "url": { "raw": "{{baseUrl}}/livres/1", "host": ["{{baseUrl}}"], "path": ["livres", "1"] },
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "livreDto",
+                  "value": "{\n  \"titre\": \"Jeff the Land Shark: Friends and Rivals\",\n  \"pages\": 120,\n  \"description\": \"Collecting Jeff the Land Shark (2025) #1-5.\",\n  \"datePublication\": \"2026-05-01\",\n  \"auteurId\": 1,\n  \"categoryId\": 1,\n  \"editeurId\": 1\n}",
+                  "type": "text"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete book",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{baseUrl}}/livres/1", "host": ["{{baseUrl}}"], "path": ["livres", "1"] }
+          }
+        }
+      ]
+    }
+  ]
+}
